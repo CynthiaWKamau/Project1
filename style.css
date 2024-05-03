@@ -1,0 +1,17 @@
+body{
+    background-color: darksalmon;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+header,footer{
+    position: absolute;
+    background-color:rgb(95, 145, 187);
+    width: 100%;
+    color: rgb(13, 117, 117);
+}
+header h2{
+    position: absolute;
+    margin-top: 20px;
+    left: 100%;
+}
+
