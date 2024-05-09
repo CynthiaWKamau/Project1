@@ -1,17 +1,18 @@
 body{
-    background-color: darksalmon;
+    background-color: lightblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0%;
 
 }
 header,footer{
     position: absolute;
-    background-color:rgb(185, 95, 99);
+    background-color:darkgrey;
     width: 100%;
-    color: rgb(13, 117, 117);
+    color:rgb(80, 189, 30) ;
 }
 header h2{
     position: absolute;
-    margin-top: 20px;
+    margin-top:10px;
     left: 100%;
 }
 header{
