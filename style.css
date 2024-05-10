@@ -83,3 +83,23 @@ header ul li a:hover{
 header button{
     padding:13px 40px;
 }
+table{
+    width:800px;
+    margin:auto;
+    table-layout: fixed;
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+        }
+        table, th,td{
+            color: darkslateblue;
+            border: 3px dotted black;
+            border-collapse:collapse;
+            padding: 20px;
+            font-size:20px;
+    
+        }
+        tr:hover{
+background-color: lightskyblue;
+        }
+        
