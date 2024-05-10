@@ -83,6 +83,8 @@ header ul li a:hover{
 header button{
     padding:13px 40px;
 }
+
+/*table formatting*/
 table{
     width:800px;
     margin:auto;
