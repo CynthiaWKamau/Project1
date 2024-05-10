@@ -1,24 +1,46 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
 body{
     font-family: Tahoma;
 
 }
-h1,h2{
-    font-family: sans-serif;
-    font-weight:400;
+
+/*Style for logo and header*/
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: grey;
 }
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+.navlinks {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.navlinks li {
+    margin-right: 10px;
+}
+
+.navlinks li:first-child{
+    margin-right: auto;
+}
+
 a{
     text-decoration:none ;
 }
 li{
     list-style: none;
 }
-.flex{
-    display:flex;
-}
-.flex_space{
-    display: flex;
-    justify-content: space-between;
-}
+
 button{
     border:none;
     background: none;
@@ -26,18 +48,13 @@ button{
     transition:0.5s;
     cursor: pointer;
 }
-.main-button{
-    padding: 15px 40px;
-    background:blueviolet;
-    font-weight: bold;
-    color:black;
+header ul li a{
+    color:lightskyblue;
+    margin:0 10px;
+    transition:0.5s;
 }
-.secondary-button{
-    padding: 15px 40px;
-    background:none;
-    border:2px solid white;
-    font-weight: bold;
-    color:white;
+header ul li a:hover{
+    color: lightskyblue;
 }
 
 .container{
@@ -50,9 +67,7 @@ header{
     line-height:10vh;
     padding:0 20px;
 }
-header img{
-    margin: 20px 0;
-}
+
 header ul{
     display:inline-block;
 }
@@ -61,16 +76,12 @@ header ul li{
     text-transform: uppercase;
 }
 header ul li a{
-    colour:lightskyblue;
-    margin:0 10px;
+    color:darkmagenta;
+    margin: 2px;
     transition:0.5s;
 }
 header ul li a:hover{
     color: lightskyblue;
-}
-header i{
-    margin:0 20px;
-
 }
 header button{
     padding:13px 40px;
