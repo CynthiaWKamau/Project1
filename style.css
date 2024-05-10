@@ -4,7 +4,11 @@
     box-sizing:border-box;
 }
 body{
+    background-color: lightblue;
     font-family: Tahoma;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
 
