@@ -27,20 +27,11 @@ body{
     align-items: center;
 }
 .navlinks li {
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
-.navlinks li:first-child{
-    margin-right: auto;
-}
 
-a{
-    text-decoration:none ;
-}
-li{
-    list-style: none;
-}
-
+/*style for button*/
 button{
     border:none;
     background: none;
@@ -48,6 +39,8 @@ button{
     transition:0.5s;
     cursor: pointer;
 }
+
+/*style for  header*/
 header ul li a{
     color:lightskyblue;
     margin:0 10px;
@@ -73,7 +66,7 @@ header ul{
 }
 header ul li{
     display:inline-block;
-    text-transform: uppercase;
+    text-transform: unset;
 }
 header ul li a{
     color:darkmagenta;
