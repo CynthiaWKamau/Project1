@@ -3,6 +3,7 @@
     margin:0;
     box-sizing:border-box;
 }
+
 body{
     background-color: lightblue;
     font-family: Tahoma;
@@ -120,6 +121,7 @@ background-color: lightskyblue;
     float:left; 
    width:20%;
 }
+
 @keyframes slider{
     0%{
         left:0%
