@@ -37,7 +37,7 @@ date_default_timezone_set("Africa/Nairobi");//local time
 
     //Variable declaration
     $fname="Cynthia  Kamau";//declaration of a string variable
-    $yob=2004;//declaration of an integer
+    $yob=2005;//declaration of an integer
 
     print " <br> ";
 
