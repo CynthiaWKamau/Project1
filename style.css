@@ -154,5 +154,25 @@ background-color: lightskyblue;
     }
 }
 
+/*Padding on forms*/
+.form-container {
+    padding: 20px; 
+    background-color:#e6f7ff;
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
+}
 
+.form-container input[type="text"],
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: medium;
+    font-family: 'Times New Roman';
+    border-radius: 8px;
+    border: 1px solid;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    background: color #f4f4f4;;
+}
 
