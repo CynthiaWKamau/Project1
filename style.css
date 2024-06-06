@@ -53,6 +53,7 @@ body{
     background: grey;
     padding: 13px 20px;
     border: none;
+    margin-top:20 px ;
    
 }
 
@@ -199,23 +200,25 @@ background-color: lightskyblue;
 
 /*Showcase*/
 #showcase{
-    background:url(images/b1.jpeg)no-repeat
-    center center/cover;
+    background:url(images/b1.jpeg)no-repeat center center/cover;
     height:500px;
-}
-#showcase.showcase-content{
-    color:whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 170px;
-
+}
+.showcase-content {
+    color: lightblue;
+    max-width: 600px;
 }
 
-#showcase.showcase-content h1{
+
+#showcase-content h1{
     font: size 60px;
     line-height: 1.2em;
-
+    margin-bottom: 20px;
 }
-#showcase.showcase-content p{
+#showcase-content p{
     padding: 20px;
     line-height: 1.7em;
 }
