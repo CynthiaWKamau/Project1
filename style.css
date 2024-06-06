@@ -133,16 +133,15 @@ header button{
 
 #slider figure {
     display: flex;
-    width: 500%; /* 5 images = 500% */
+    width: 500%;
     margin: 0;
     animation: 20s slider infinite;
 }
 
 #slider figure img {
-    width: 20%; /* Each image takes 20% of the figure's width */
-    height: 500px; /* Set a consistent height */
-    object-fit: cover; /* Ensures the images cover the area without stretching */
-}
+    width: 20%; 
+    height: 500px; 
+    object-fit: cover; 
 
 @keyframes slider {
     0%{
@@ -173,7 +172,7 @@ header button{
     left:-400%
     }
 }
-
+}
 
 /*table formatting*/
 table{
