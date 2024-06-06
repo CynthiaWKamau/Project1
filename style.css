@@ -107,6 +107,74 @@ header button{
     padding:13px 40px;
 }
 
+/*Carousel formatting*/
+.carousel-item{
+    background:lightblue;
+    color: darkmagenta;
+    padding:50px 0;
+}
+.carousel-item.container{
+  text-align: center;
+}
+.center-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+/* Image slider */
+#slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+#slider figure {
+    display: flex;
+    width: 500%; /* 5 images = 500% */
+    margin: 0;
+    animation: 20s slider infinite;
+}
+
+#slider figure img {
+    width: 20%; /* Each image takes 20% of the figure's width */
+    height: 500px; /* Set a consistent height */
+    object-fit: cover; /* Ensures the images cover the area without stretching */
+}
+
+@keyframes slider {
+    0%{
+        left:0%
+ }
+ 20%{
+    left:0%;
+}
+25%{
+    left:-100%
+}
+45%{
+    left:-100%
+}
+50%{
+    left:-200%;
+}
+70%{
+    left:-200%
+}
+75%{
+    left:-300%
+}
+95%{
+    left:-300%
+}
+100%{
+    left:-400%
+    }
+}
+
+
 /*table formatting*/
 table{
     width:800px;
