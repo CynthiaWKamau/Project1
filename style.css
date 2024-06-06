@@ -128,53 +128,7 @@ table{
 background-color: lightskyblue;
         }
      
-        /*Addition of image slider*/
-#slider{
-    width:100%;
-    overflow:hidden;
-}
-#slider figure{
-    position:relative;
-    width:500%;
-    margin:0;
-    left:-400;
-    animation: 20s slider infinite ;
-   
-}
-#slider figure img{
-    float:left; 
-   width:20%;
-}
-
-@keyframes slider{
-0%{
-        left:0%
- }
- 20%{
-    left:0%;
-}
-25%{
-    left:-100%
-}
-45%{
-    left:-100%
-}
-50%{
-    left:-200%;
-}
-70%{
-    left:-200%
-}
-75%{
-    left:-300%
-}
-95%{
-    left:-300%
-}
-100%{
-    left:-400%
-    }
-}
+       
 
 /*Padding on forms*/
 .form-container {
@@ -213,12 +167,12 @@ background-color: lightskyblue;
 }
 
 
-#showcase-content h1{
+.showcase-content h1{
     font: size 60px;
     line-height: 1.2em;
     margin-bottom: 20px;
 }
-#showcase-content p{
+.showcase-content p{
     padding: 20px;
     line-height: 1.7em;
 }
