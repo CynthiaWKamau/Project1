@@ -30,7 +30,7 @@
         <div class="showcase-content">
             <h1><span class="text-primary">Welcome</span> to paradise</h1>
             <p class="lead"> Welcome to Amara Hotel, where luxury meets comfort in the heart of Maldives. Experience exceptional service, elegant accommodations, and a warm, inviting atmosphere. Your perfect stay begins here.</p>
-                <a class="btn"href="about.html">About  Amara Hotel</a>
+                <a class="btn"href="about.php">About  Amara Hotel</a>
         </div>
        </div>
 </div>
@@ -46,7 +46,7 @@ data-bs-ride="carousel">
        <div class="container">
         <h1 align="center">AMARA HOTEL GALLERY</h1>
         <div class="center-btn">
-        <a class ="btn"href="bookings.html">Book with us Today</a>
+        <a class ="btn"href="bookings.php">Book with us Today</a>
        </div>
        </div>
 
