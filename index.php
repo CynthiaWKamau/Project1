@@ -6,7 +6,7 @@
     <title>Home page</title>
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+   
 </head>
 <body>
 
@@ -35,51 +35,5 @@
        </div>
 </div>
 
-<!--Carousel-->
-<div class="carousel slide"
-id="Carousel"
-data-bs-wrap="true"
-data-bs-ride="carousel">
-
-<div class="carousel-inner">
-  <div class="carousel-item active">
-       <div class="container">
-        <h1 align="center">AMARA HOTEL GALLERY</h1>
-        <div class="center-btn">
-        <a class ="btn"href="bookings.php">Book with us Today</a>
-       </div>
-       </div>
-
-       <div class="carousel-item ">
-        <img src="images/background.jpeg" alt=""width="100%">
-       </div>
-
-<div class="carousel-item ">
-    <img src="images/Jet skii 1.jpeg" alt=""width="100%">
-</div>
-
-<div class="carousel-item ">
-    <img src="images/cruise 1.jpeg" alt=""width="100%">
-</div>
-
-<div class="carousel-item active">
-    <img src="images/spa 3.jpeg" alt=""width="100%">
-</div>
-
-<button class="carousel-control-prev"type="button"
-data-bs-target="#Carousel"
-data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-</button>
-
-<button class="carousel-control-next"
-    type="button"
-    data-bs-target="#Carousel"
-    data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
-
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

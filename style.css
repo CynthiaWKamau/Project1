@@ -107,21 +107,6 @@ header button{
     padding:13px 40px;
 }
 
-/*Carousel formatting*/
-.carousel-item{
-    background:lightblue;
-    color: darkmagenta;
-    padding:50px 0;
-}
-.carousel-item.container{
-  text-align: center;
-}
-.center-btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 
 
 /*table formatting*/
