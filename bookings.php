@@ -15,10 +15,11 @@
         </div>
     <header>
         <?php include_once("templates/nav.php");?>    
-        </div>
+      
     </header>
+</div>
+    
 
-</body>
 <section class="bookings" id="bookings">
                     <div class="container">
                         <h1>Make Reservations with us today</h1>
@@ -43,20 +44,35 @@
 </div>
                           <div class="box">
                       <button class="flex">
-                     <br>
+
                        <input type="submit" value="CHECK AVAILABILITY">
 
                       </button>
 
 </div>
+</div>
+</div>
+</section>
 
+<section>
+<div class="container">
+    <div class="slider-wrapper">
+        <div class="image-list">
+            <img src="images/background.jpeg" alt="background" class="image-item">
+            <img src="images/spa.jpeg" alt="background" class="image-item">
+            <img src="images/hotel.jpeg" alt="background" class="image-item">
+            <img src="images/back 2.jpeg" alt="background" class="image-item">
+            <img src="images/cruise 1.jpeg" alt="background" class="image-item">
+            <img src="images/hotel back.jpeg" alt="background" class="image-item">
+            <img src="images/scuba diving.jpeg" alt="background" class="image-item">
 
-
-
-
-
-
-
-        
+</div>
+</div>
+<div class="slider-scrollbar">
+    <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+</div>
+</section>
+     
 </body>
 </html>
