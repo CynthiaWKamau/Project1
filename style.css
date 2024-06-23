@@ -219,43 +219,24 @@ tr:hover {
     margin-top: 10px;
 }
 
-.slider-wrapper.image-list{
-    display:grid;
-    gap: 18px;
-    font-size: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    grid-template-columns: repeat(10,1fr);
-}
-.slider-wrapper.image-list::-webkit-scrollbar{
-    display: none;
-}
-
-.slider-wrapper.image-list.image-iem{
-    width: 325px;
-    height:400px;
-    object-fit: cover;
-}
-
-.container.slider-scrollbar{
-    height:24px ;
-    width:100%;
-    background: grey;
-    display: flex;
-    align-items: center;
-}
-
-.slider-scrollbar.scrollbar-track{
-    height: 2px;
-    width: 100%;
-    background: white;
-
-}
-
-.slider-scrollbar.scrollbar-thumb{
+.slider-wrapper .prev, .slider-wrapper .next {
     position: absolute;
-    height: 2px;
-    width: 100%;
-    background: white;
-
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
 }
+
+.slider-wrapper .prev {
+    left: 10px;
+}
+
+.slider-wrapper .next {
+    right: 10px;
+}
+
+

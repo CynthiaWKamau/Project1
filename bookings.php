@@ -72,7 +72,10 @@
     <div class="scrollbar-track">
         <div class="scrollbar-thumb"></div>
 </div>
+</div>
+</div>
 </section>
-     
+
+<script src="script.js"></script>
 </body>
 </html>
