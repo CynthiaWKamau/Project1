@@ -72,6 +72,7 @@
         </tr>           
 
             </table>
+            
             <br/>
             <img src="images/view restaurant.jpg"alt=""width="30%">
             <img src="images/restaurant.jpg"alt=""width="30%">

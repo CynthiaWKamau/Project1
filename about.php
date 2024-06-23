@@ -41,21 +41,27 @@
 <form>
     <label for="fname">First name:</label><br>
     <input type="text"id="fname"name="fname"><br>
+
     <label for="lname">Last name:</label><br>
     <input type="text" id="lname" name="lname"><br>
+
     <label for="address">Email Address:</label><br>
   <input type="text" id="address" address="address"><br>
-  <label for="feedback">Client feedback:</label><br>
-  <input type="feedback" id="feedback" feedback ="feedback"><br><br>
-  <label for="rating">Client Rating:</label><br>
-  <select Client Rating=""Client Rating=""><br><br>
+
+<label for="rating">Client Rating:</label><br>
+  <select Client Rating=""Client Rating="">
     <option value="">Select Rating</option>
   <option value="">Amazing service</option>
     <option value="">Mid Service</option>
     <option value="">Bad Service</option>
     <option value="">Room for improvement</option>
+    <br><br>
+    </select>
+<br><br>
 
-  </select><br><br>
+  <label for="feedback">Client feedback:</label><br>
+  <textarea name="Client feedback" id="" cols="30" rows="5"></textarea><br>
+  
     <input type="submit" value="Submit">
 
 </form>
