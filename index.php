@@ -31,6 +31,8 @@
             <h1><span class="text-primary">Welcome</span> to paradise</h1>
             <p class="lead"> Welcome to Amara Hotel, where luxury meets comfort in the heart of Maldives. Experience exceptional service, elegant accommodations, and a warm, inviting atmosphere. Your perfect stay begins here.</p>
                 <a class="btn"href="about.php">About  Amara Hotel</a>
+
+              
         </div>
        </div>
 </div>
