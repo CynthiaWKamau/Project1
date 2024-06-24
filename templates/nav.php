@@ -6,6 +6,7 @@
                     <li> <a href="rooms.php">Rooms Details</a></li>
                     <li><a href="menu.php">Menu</a></li>
                     <li><a href="Activities.php">Activities</a></li>
-                    <li><a href="bookings.php">Book Services</a></li>    
+                    <li><a href="bookings.php">Book Services</a></li>  
+                      
                 </ul>
             </div>
