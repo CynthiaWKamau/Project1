@@ -36,7 +36,7 @@
         </div>
        </div>
 </div>
-
+<a href="logout.php">Log Out</a>
 
 </body>
 </html>
