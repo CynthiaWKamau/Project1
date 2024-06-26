@@ -1,30 +1,5 @@
 <?php
-require "config.php";
-include 'db_connection.php';
-
-if(isset($_POST["submit"])) {   
-    $name = $_POST["name"];
-    $username = $_POST["username"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $confirmpassword = $_POST["confirmpassword"];
-    
-    // Check for duplicate username or email
-    $duplicate = mysqli_query($conn, "SELECT * FROM tb_user WHERE username='$username' OR email='$email'");
-    
-    if(mysqli_num_rows($duplicate) > 0) {
-        echo "<script>alert('Username or Email Has Already Been Taken');</script>";
-    } else {
-        if($password == $confirmpassword) {
-            // Insert the new user into the database
-            $query = "INSERT INTO tb_user (name, username, email, password) VALUES ('$name', '$username', '$email', '$password')";
-            mysqli_query($conn, $query);
-            echo "<script>alert('Registration Successful');</script>";
-        } else {
-            echo "<script>alert('Password Does Not Match');</script>";
-        }
-    }
-}
+  include 'db_connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -56,5 +31,52 @@ if(isset($_POST["submit"])) {
     </form>
     <br>
     <a href="login.php">Login</a>
-</body>
+
+    </body>
 </html>
+
+    <?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        $name = filter_input(INPUT_POST, "name" ,FILTER_SANITIZE_SPECIAL_CHARS);
+        $username = filter_input(INPUT_POST, "username" ,FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST, "email" ,FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, "password" ,FILTER_SANITIZE_SPECIAL_CHARS);
+        $confirmpassword = filter_input(INPUT_POST, "confirmpassword" ,FILTER_SANITIZE_SPECIAL_CHARS);
+
+
+        if(empty($name)){
+        echo "<script>alert('Please enter a name');</script>";
+        } elseif(empty($username)) {
+             echo "<script>alert('Please enter username');</script>";
+         } elseif(empty($email)){
+            echo "<script>alert('Please enter email');</script>";
+        }elseif(empty($password)){
+            echo "<script>alert('Please enter password');</script>";
+        }elseif(empty($confirmpassword)){
+            echo "<script>alert('Please enter confirmation password');</script>";
+        
+         } else{
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO user( name, username, email, password, confirmation password) VALUES ('$name','$username','$email','$password','$confirmpassword')";
+            mysqli_query($conn, $sql);
+
+            try{
+                echo "<script>alert('You are now logged in');</script>";
+                header("Location:index.php");
+            }catch(mysqli_sql_exception $e){
+                echo "<script>alert('username is taken');</script>";
+                header("Location:login.php");
+            }
+
+        }
+
+
+    }
+    $conn->close();
+
+
+
+
+?>
+

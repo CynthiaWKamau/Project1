@@ -21,9 +21,14 @@
             <br>
             <button name="submit">Login</button>
         </form>
-</div>
+   </div>  
+    
+        <a href="registration.php">Registration</a>
+
 </body>
 </html>
+<br>
+<a href="registration.php">Registration</a>
 
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
