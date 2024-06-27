@@ -15,7 +15,7 @@
             if (mysqli_num_rows($duplicate) > 0) {
                 echo "<script>alert('Username or Email has been taken');</script>";
             } else {
-                $query = "INSERT INTO registration (firstname, lastname, age, username, email, password) VALUES ('$firstname', '$lastname', '$age', '$username', '$email', '$password')";
+                $query = "INSERT INTO registration (name, username, email, password, confirmpassword) VALUES ('$name', '$username',  '$email', '$password','$confirmpassword')";
                 mysqli_query($conn, $query);
                 echo "<script>alert('Registration Successful');</script>";
             }
@@ -57,3 +57,6 @@
 </html>
 
     
+
+
+
