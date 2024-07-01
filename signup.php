@@ -6,7 +6,7 @@
     <title>Registration</title>
 </head>
 <body>
-    <h2>Registration</h2>
+    <h2>Sign Up</h2>
     <form action="" method="post" autocomplete="off">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" required><br>
@@ -20,27 +20,25 @@
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" required><br>
         
-        <label for="confirmpassword">Confirm Password:</label>
-        <input type="password" name="confirmpassword" id="confirmpassword" required><br>
         
-        <button type="submit" name="submit">Register</button>
+        <button type="submit" name="submit">Sign Up</button>
     </form>
     <br>
-    <a href="login.php">Login</a>
+    <a href="signin.php">Sign In</a>
 
  <?php
 
  require 'db_connection.php';
 
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-     if (isset($_POST["name"], $_POST["username"], $_POST["email"], $_POST["password"], $_POST["confirmpassword"])) {
+     if (isset($_POST["name"], $_POST["username"], $_POST["email"], $_POST["password"])) {
          $name = $_POST["name"];
          $username = $_POST["username"];
          $email = $_POST["email"];
          $password = $_POST["password"];
-         $confirmpassword = $_POST["confirmpassword"];
+        
 
-         if ($password !== $confirmpassword) {
+         if ($password !== $password) {
              echo "<script>alert('Passwords do not match');</script>";
          } else {
              $stmt = $conn->prepare("SELECT * FROM registration WHERE username=? OR email=?");

@@ -14,7 +14,7 @@
        
         </div>
     <header>
-        <?php include_once("templates/nav.php");?>    
+        <?php include_once("nav.php");?>    
         </div>
     </header>
     

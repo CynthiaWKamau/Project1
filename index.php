@@ -20,7 +20,7 @@
             </div>
             <!--Header-->
         <header>
-      <?php include_once("templates/nav.php");?>     
+      <?php include_once("nav.php");?>     
         </div>
         </header>
  </div>
@@ -37,7 +37,7 @@
         </div>
        </div>
 </div>
-<a href="logout.php">Log Out</a>
+
 
 </body>
 </html>
