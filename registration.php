@@ -27,8 +27,9 @@
     </form>
     <br>
     <a href="login.php">Login</a>
-    <?php
- 
+
+ <?php
+
  require 'db_connection.php';
 
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,24 +38,32 @@
          $username = $_POST["username"];
          $email = $_POST["email"];
          $password = $_POST["password"];
-         $confirmpassword = $_POST["confirm password"];
+         $confirmpassword = $_POST["confirmpassword"];
 
-         $duplicate = mysqli_query($conn, "SELECT * FROM registration WHERE username='$username' OR email='$email'");
-
-         if (mysqli_num_rows($duplicate) > 0) {
-             echo "<script>alert('Username or Email has been taken');</script>";
+         if ($password !== $confirmpassword) {
+             echo "<script>alert('Passwords do not match');</script>";
          } else {
-             $query = "INSERT INTO registration (name, username, email, password, confirmpassword) VALUES ('$name', '$username',  '$email', '$password','$confirmpassword')";
-             mysqli_query($conn, $query);
-             echo "<script>alert('Registration Successful');</script>";
+             $stmt = $conn->prepare("SELECT * FROM registration WHERE username=? OR email=?");
+             $stmt->bind_param("ss", $username, $email);
+             $stmt->execute();
+             $result = $stmt->get_result();
+
+             if ($result->num_rows > 0) {
+                 echo "<script>alert('Username or Email has been taken');</script>";
+             } else {
+                 $stmt = $conn->prepare("INSERT INTO registration (name, username, email, password) VALUES (?, ?, ?, ?)");
+                 $stmt->bind_param("ssss", $name, $username, $email, $password);
+
+                 if ($stmt->execute()) {
+                     echo "<script>alert('Registration Successful');</script>";
+                 } else {
+                     echo "<script>alert('Registration Failed');</script>";
+                 }
+             }
+             $stmt->close();
          }
      }
  }
-?>
+ ?>
     </body>
 </html>
-
-    
-
-
-
