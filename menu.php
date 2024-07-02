@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles for the carousel */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+
+        .carousel img {
+            scroll-snap-align: start;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Optional: Style for container */
+        .carousel-container {
+            max-width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+    </style>
+
+
 </head>
 <body>
 
@@ -24,12 +50,18 @@
     <h1 align="center">AMARA HOTEL</h1>
     <h2 align="center">AMARA'S MENU</h2>
 </p>Indulge in a culinary journey at Amara Hotel, where our menu is crafted to tantalize your taste buds with a delightful selection of dishes. From hearty breakfast options to satisfying lunch and dinner choices, our menu offers a fusion of flavors and premium ingredients to cater to every palate.</p>
-<img src="images/food 1.jpeg"alt=""width="30%">
-<img src="images/desert.jpeg"alt=""width="20%">
-<img src="images/food 2.jpeg"alt=""width="28%">
-<img src="images/Dinner by the beach.jpeg"alt=""width="30%">
-<img src="images/food.jpeg"alt=""width="30%">
-<img src="images/Fresh seafood Perdido Key.jpeg"alt=""width="25%">
+<br><br>
+<div class="carousel-container">
+        <div class="carousel">
+            <img src="images/food 1.jpeg" alt="Food 1">
+            <img src="images/desert.jpeg" alt="Dessert">
+            <img src="images/food 2.jpeg" alt="Food 2">
+            <img src="images/Dinner by the beach.jpeg" alt="Dinner by the beach">
+            <img src="images/food.jpeg" alt="Food">
+            <img src="images/Fresh seafood Perdido Key.jpeg" alt="Fresh seafood Perdido Key">
+        </div>
+    </div>
+
 
 <br> <br>
 <table class="menu_table"border="1px" style="border-collapse: collapse;">
