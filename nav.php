@@ -7,8 +7,8 @@
                     <li><a href="menu.php">Menu</a></li>
                     <li><a href="Activities.php">Activities</a></li>
                     <li><a href="bookings.php">Book Services</a></li>  
-                  <li><a href="signup.php">Signup</a></li>    
-                  <li><a href="signin.php">Signin</a></li>  
+                  <li><a href="signup.php">Sign Up</a></li>    
+                  <li><a href="signin.php">Sign In</a></li>  
                       <li><a href="logout.php">Log Out</a></li>  
                     
                     

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Bookings</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Styles for the carousel */
@@ -11,7 +11,7 @@
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+            -webkit-overflow-scrolling: touch; 
             width: 100%;
             scroll-behavior: smooth;
         }
@@ -22,12 +22,48 @@
             height: auto;
         }
 
-        /* Optional: Style for container */
+       
         .carousel-container {
             max-width: 100%;
             overflow: hidden;
             margin: 0 auto;
         }
+
+        .content.grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            justify-content: center;
+        }
+
+        .box {
+            padding: 10px;
+        }
+
+        .box span {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .box input[type="date"],
+        .box input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        .box button {
+            background-color: violet;
+            color: lightblue;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .box button:hover {
+            background-color: lightblue;
+        }
+
     </style>
 </head>
 <body>
@@ -77,7 +113,7 @@
  <!-- Gallery Section -->
  <section class="gallery">
             <div class="container">
-                <h1>AMARA'S GALLERY</h1>
+                <h1>AMARA HOTEL GALLERY</h1>
 
                 <div class="carousel-container">
                     <div class="carousel">
@@ -88,6 +124,9 @@
                         <img src="images/hotel back.jpeg" alt="Hotel Back" class="image-item">
                         <img src="images/yoga.jpeg" alt="Yoga" class="image-item">
                         <img src="images/scuba diving.jpeg" alt="Scuba Diving" class="image-item">
+                        <img src="images/events.jpeg" alt="Scuba Diving" class="image-item">
+                        <img src="images/Dinner by the beach.jpeg" alt="Scuba Diving" class="image-item">
+
                     </div>
                 </div>
             </div>
