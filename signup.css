@@ -1,0 +1,86 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the form */
+.container {
+    width: 400px;
+    background-color: #f5f5fd; /* Light purple background */
+    padding: 30px; /* Increased padding for spacing */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align the form */
+}
+
+/* Form title */
+.container h2 {
+    margin-bottom: 20px;
+    color: #5e35b1; /* Darker shade of purple */
+}
+
+/* Form fields */
+.container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container label {
+    margin-bottom: 10px;
+    color: #4527a0; /* Darker shade of purple */
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="password"] {
+    padding: 12px; /* Increased padding for larger input fields */
+    margin-bottom: 20px; /* Increased margin for spacing */
+    border: 1px solid #b39ddb; /* Lighter shade of purple */
+    border-radius: 4px;
+    font-size: 18px; /* Increased font size for better readability */
+}
+
+/* Button */
+.container button {
+    width: 100%;
+    padding: 12px; /* Increased padding for larger button */
+    border: none;
+    background-color: #42a5f5; /* Light blue */
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.container button:hover {
+    background-color: #1e88e5; /* Darker shade of blue */
+}
+
+/* Link styles */
+.container a {
+    display: block;
+    margin-top: 20px; /* Increased margin for spacing */
+    text-decoration: none;
+    color: #5e35b1; /* Darker shade of purple */
+    font-weight: bold;
+}
+
+/* Link hover effect */
+.container a:hover {
+    text-decoration: underline;
+    color: #4527a0; /* Darker shade of purple for hover */
+}
