@@ -67,7 +67,7 @@
             <br>
             <input name="password" type="password" placeholder="Password" required>
             <br>
-            <button type="submit" name="submit">Sign Up</button>
+            <button type="submit" name="submit">Sign In</button>
         </form>
     </div>
 </body>
