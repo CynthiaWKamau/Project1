@@ -27,6 +27,37 @@
         <a href="signin.php">Sign In</a>
     </div>
 
+    <!-- Update User Form -->
+    <div class="container">
+        <h2>Update User</h2>
+        <form action="" method="post" autocomplete="off">
+            <label for="update_username">Username:</label>
+            <input type="text" name="update_username" id="update_username" required><br>
+            
+            <label for="update_name">New Name:</label>
+            <input type="text" name="update_name" id="update_name"><br>
+            
+            <label for="update_email">New Email:</label>
+            <input type="email" name="update_email" id="update_email"><br>
+            
+            <label for="update_password">New Password:</label>
+            <input type="password" name="update_password" id="update_password"><br>
+            
+            <button type="submit" name="update">Update</button>
+        </form>
+    </div>
+
+    <!-- Delete User Form -->
+    <div class="container">
+        <h2>Delete User</h2>
+        <form action="" method="post" autocomplete="off">
+            <label for="delete_username">Username:</label>
+            <input type="text" name="delete_username" id="delete_username" required><br>
+            
+            <button type="submit" name="delete">Delete</button>
+        </form>
+    </div>
+
     <?php
     require 'db_connection.php';
 
@@ -61,6 +92,7 @@
             }
         }
     }
+ 
     ?>
 </body>
 </html>
