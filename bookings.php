@@ -53,8 +53,8 @@
         }
 
         .box button {
-            background-color: violet;
-            color: lightblue;
+            background-color: darkmagenta;
+            color: gray;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
