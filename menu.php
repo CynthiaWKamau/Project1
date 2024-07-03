@@ -11,7 +11,7 @@
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+            -webkit-overflow-scrolling: touch; 
             width: 100%;
             scroll-behavior: smooth;
         }
@@ -22,12 +22,13 @@
             height: auto;
         }
 
-        /* Optional: Style for container */
+       
         .carousel-container {
             max-width: 100%;
             overflow: hidden;
             margin: 0 auto;
         }
+        
     </style>
 
 
@@ -51,6 +52,8 @@
     <h2 align="center">AMARA'S MENU</h2>
 </p>Indulge in a culinary journey at Amara Hotel, where our menu is crafted to tantalize your taste buds with a delightful selection of dishes. From hearty breakfast options to satisfying lunch and dinner choices, our menu offers a fusion of flavors and premium ingredients to cater to every palate.</p>
 <br><br>
+
+<section class="gallery">
 <div class="carousel-container">
         <div class="carousel">
             <img src="images/food 1.jpeg" alt="Food 1">
@@ -61,6 +64,7 @@
             <img src="images/Fresh seafood Perdido Key.jpeg" alt="Fresh seafood Perdido Key">
         </div>
     </div>
+    </section>
 
 
 <br> <br>
