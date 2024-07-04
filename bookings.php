@@ -6,6 +6,13 @@
     <title> Bookings</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /*Heading colour*/
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #6a5acd;
+            text-align: center;
+        }
+
         /* Styles for the carousel */
         .carousel {
             display: flex;
@@ -26,7 +33,7 @@
         .carousel-container {
             max-width: 100%;
             overflow: hidden;
-            margin: 0 auto;
+            margin: 20px 0;
         }
 
         .content.grid {
@@ -36,32 +43,55 @@
             justify-content: center;
         }
 
+        .gallery h1{
+            margin-bottom: 20px;
+        }
+     
+/*Bookings page*/
+.bookings .content {
+            background-color: #e0ffff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
         .box {
             padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         .box span {
             display: block;
             margin-bottom: 5px;
+            color: #333;
         }
 
+        .box select,
         .box input[type="date"],
         .box input[type="number"] {
             width: 100%;
             padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             margin-top: 5px;
         }
 
         .box button {
-            background-color: darkmagenta;
-            color: gray;
+            width: 100%;
+            padding: 10px;
+            background-color: #6a5acd;
+            color: #fff;
             border: none;
-            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
         .box button:hover {
-            background-color: lightblue;
+            background-color: #9370db;
         }
 
     </style>
@@ -82,10 +112,18 @@
 <!--bookings-->
 <section class="bookings" id="bookings">
             <div class="container">
-                <h1 style="font-family:'Times New Roman', Times, serif;" align="center">Make Reservations with us today!!!</h1>
+                <h1>Make Reservations with us today!!!</h1>
 <br>
                 <div class="content grid">
                     <div class="box">
+                    <span>ROOM TYPE</span>
+                    <select>
+                        <option value="standard">Standard Room</option>
+                        <option value="deluxe">Deluxe Room</option>
+                        <option value="suite">Suite</option>
+                        <option value="family">Family Room</option>
+                    </select>
+                </div>
                         <span>ARRIVAL DATE</span><br>
                         <input type="date" placeholder="21/08/2024">
                     </div>
@@ -113,7 +151,7 @@
  <!-- Gallery Section -->
  <section class="gallery">
             <div class="container">
-                <h1 style="font-family: 'Times New Roman', Times, serif;">HOTEL GALLERY</h1>
+                <h1>HOTEL GALLERY</h1>
 
                 <div class="carousel-container">
                     <div class="carousel">
