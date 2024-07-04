@@ -6,6 +6,11 @@
     <title>Menu</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        h2{
+            color: #6a5acd;
+            font-family: 'Times New Roman', Times, serif;
+           text-align:center;
+        }
         /* Styles for the carousel */
         .carousel {
             display: flex;
@@ -48,8 +53,8 @@
 
        </body>
 
-    <h1 align="center">AMARA HOTEL</h1>
-    <h2 align="center">AMARA'S MENU</h2>
+   
+    <h2 >AMARA'S MENU</h2>
 </p>Indulge in a culinary journey at Amara Hotel, where our menu is crafted to tantalize your taste buds with a delightful selection of dishes. From hearty breakfast options to satisfying lunch and dinner choices, our menu offers a fusion of flavors and premium ingredients to cater to every palate.</p>
 <br><br>
 
@@ -156,6 +161,9 @@
 </table>
 <br><br>
 <p>This menu offers a variety of seafood dishes for different meals, including breakfast, lunch, and dinner, along with refreshing drink options to complement the meals.</p>
+
+
+<a class="btn"href="bookings.php">BOOK WITH US TODAY</a>
 
 
 </body>

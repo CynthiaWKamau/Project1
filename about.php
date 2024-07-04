@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <style>
         h1 {
-            color: purple;
+            color: #6a5acd;
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
         }
         h2 {
-            color: purple;
-            text-align: left;
+            color: #6a5acd;
             font-family: 'Times New Roman', Times, serif;
         }
         .container {
@@ -85,7 +84,7 @@
         <li>Website: <a href="http://www.amaraaa.com">www.amarahotel.com</a></li>
     </ul>
 <br>
-    <h2>Client Feedback</h2>
+    <h2 align="center">Client Feedback</h2>
     <div class="container form-container">
         <form method="POST" action="">
             <label for="fname">First name:</label><br>
