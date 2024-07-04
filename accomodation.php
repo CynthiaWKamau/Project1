@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 <style>
     h1,h2{
-        color: purple;
+        color: #6a5acd;
         font-family: 'Times New Roman', Times, serif;
         text-align: center;
     }
