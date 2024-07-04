@@ -176,5 +176,56 @@
             </div>
         </section>
     </div>
+    <?php
+ require 'db_connection.php';
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Validate and sanitize input
+        $RoomType = $_POST["Room Type"];
+        $ArrivalDate = $_POST["Arrival Date"];
+        $DepartureDate = $_POST["Departure Date"];
+        $Adults = $_POST["Adults"];
+        $Children = $_POST["Children"];
+
+        if (empty($RoomType)) {
+            echo "<script>alert('Please enter a roomtype');</script>";
+        } elseif (empty($ArrivalDate)) {
+            echo "<script>alert('Please enter arrivaldate');</script>";
+        } elseif (empty($DepartureDate)) {
+            echo "<script>alert('Please enter departuredate');</script>";
+        } elseif (empty($Adults)) {
+            echo "<script>alert('Please enter the number of adults');</script>";
+        } elseif (empty($Children)) {
+            echo "<script>alert('Please enter the number of children');</script>";
+        } else {
+            // Prepare and bind
+            $stmt = $conn->prepare("INSERT INTO `bookings`(`Room Type`, `Arrival Date`, `Departure Date`, `Adults`, `Children`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')");
+
+            if ($stmt === false) {
+                die("Prepare failed: " . htmlspecialchars($conn->error));
+            }
+
+            $bind = $stmt->bind_param("sssss", $Firstname, $Lastname, $Email, $ClientRating, $Clientfeedback);
+
+            if ($bind === false) {
+                die("Bind param failed: " . htmlspecialchars($stmt->error));
+            }
+
+            $execute = $stmt->execute();
+
+            if ($execute) {
+                echo "<script>alert('Booking Successfully submitted');</script>";
+            } else {
+                echo "<script>alert('Booking has Failed to be submitted: " . htmlspecialchars($stmt->error) . "');</script>";
+            }
+
+            $stmt->close();
+        }
+    }
+
+    // Close connection
+    $conn->close();
+    ?>
+
 </body>
 </html>
