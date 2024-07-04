@@ -6,49 +6,20 @@
     <title> Bookings</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /*Heading colour*/
+
+     .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+/*Heading*/
         h1 {
             font-family: 'Times New Roman', Times, serif;
             color: #6a5acd;
             text-align: center;
         }
-
-        /* Styles for the carousel */
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch; 
-            width: 100%;
-            scroll-behavior: smooth;
-        }
-
-        .carousel img {
-            scroll-snap-align: start;
-            width: 100%;
-            height: auto;
-        }
-
-       
-        .carousel-container {
-            max-width: 100%;
-            overflow: hidden;
-            margin: 20px 0;
-        }
-
-        .content.grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-gap: 20px;
-            justify-content: center;
-        }
-
-        .gallery h1{
-            margin-bottom: 20px;
-        }
-     
-/*Bookings page*/
-.bookings .content {
+/*Booking Page*/
+        .bookings .content {
             background-color: #e0ffff;
             border-radius: 10px;
             padding: 20px;
@@ -94,6 +65,40 @@
             background-color: #9370db;
         }
 
+        /*Carousel */
+
+        .carousel-container {
+            max-width: 100%;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; 
+            scroll-behavior: smooth;
+        }
+
+        .carousel img {
+            scroll-snap-align: start;
+            width: 100%;
+            height: auto;
+        }
+
+        .image-item {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+
+        .gallery h1 {
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -124,19 +129,20 @@
                         <option value="family">Family Room</option>
                     </select>
                 </div>
-                        <span>ARRIVAL DATE</span><br>
+                <div class="box">
+                        <span>ARRIVAL DATE</span>
                         <input type="date" placeholder="21/08/2024">
                     </div>
                     <div class="box">
-                        <span>DEPARTURE DATE</span><br>
+                        <span>DEPARTURE DATE</span>
                         <input type="date" placeholder="30/08/2024">
                     </div>
                     <div class="box">
-                        <span>ADULTS</span><br>
+                        <span>ADULTS</span>
                         <input type="number" placeholder="01">
                     </div>
                     <div class="box">
-                        <span>CHILDREN</span><br>
+                        <span>CHILDREN</span>
                         <input type="number" placeholder="01">
                     </div>
                     <div class="box">
