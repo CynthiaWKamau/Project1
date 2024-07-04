@@ -82,8 +82,8 @@
 <!--bookings-->
 <section class="bookings" id="bookings">
             <div class="container">
-                <h1>Make Reservations with us today</h1>
-
+                <h1 style="font-family:'Times New Roman', Times, serif;" align="center">Make Reservations with us today!!!</h1>
+<br>
                 <div class="content grid">
                     <div class="box">
                         <span>ARRIVAL DATE</span><br>
@@ -109,11 +109,11 @@
                 </div>
             </div>
         </section>
-
+<br><br>
  <!-- Gallery Section -->
  <section class="gallery">
             <div class="container">
-                <h1>AMARA HOTEL GALLERY</h1>
+                <h1 style="font-family: 'Times New Roman', Times, serif;">HOTEL GALLERY</h1>
 
                 <div class="carousel-container">
                     <div class="carousel">
