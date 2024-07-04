@@ -203,8 +203,8 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Validate and sanitize input
-        $FirstName = $_POST["first_name"];
-        $LastName = $_POST["last_name"];
+        $Firstname = $_POST["first_name"];
+        $Lastname = $_POST["last_name"];
         $Email = $_POST["email"];
         $Contact = $_POST["contact"];
         $RoomType = $_POST["room_type"];
@@ -220,7 +220,7 @@
             die("Prepare failed: " . htmlspecialchars($conn->error));
         }
 
-        $bind = $stmt->bind_param("sssssssss", $FirstName, $LastName, $Email, $Contact, $RoomType, $ArrivalDate, $DepartureDate, $Adults, $Children);
+        $bind = $stmt->bind_param("sssssssss", $Firstname, $Lastname, $Email, $Contact, $RoomType, $ArrivalDate, $DepartureDate, $Adults, $Children);
 
         if ($bind === false) {
             die("Bind param failed: " . htmlspecialchars($stmt->error));
