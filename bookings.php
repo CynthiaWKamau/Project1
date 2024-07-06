@@ -197,30 +197,32 @@
             </div>
         </div>
     </section>
-
     <?php
-    require 'db_connection.php';
+require 'db_connection.php';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Validate and sanitize input
-        $Firstname = $_POST["first_name"];
-        $Lastname = $_POST["last_name"];
-        $Email = $_POST["email"];
-        $Contact = $_POST["contact"];
-        $RoomType = $_POST["room_type"];
-        $ArrivalDate = $_POST["arrival_date"];
-        $DepartureDate = $_POST["departure_date"];
-        $Adults = $_POST["adults"];
-        $Children = $_POST["children"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Validate and sanitize input
+    $First_name = trim($_POST["first_name"]);
+    $Last_name = trim($_POST["last_name"]);
+    $Email = trim($_POST["email"]);
+    $Contact = trim($_POST["contact"]);
+    $Room_Type = trim($_POST["room_type"]);
+    $Arrival_Date = trim($_POST["arrival_date"]);
+    $Departure_Date = trim($_POST["departure_date"]);
+    $Adults = trim($_POST["adults"]);
+    $Children = trim($_POST["children"]);
+
+    // Ensure data is not empty and properly sanitized
+    if (!empty($First_name) && !empty($Last_name) && !empty($Email) && !empty($Contact) && !empty($Room_Type) && !empty($Arrival_Date) && !empty($Departure_Date) && !empty($Adults) && !empty($Children)) {
 
         // Prepare and bind
-        $stmt = $conn->prepare("INSERT INTO bookings (FirstName, LastName, Email, Contact, RoomType, ArrivalDate, DepartureDate, Adults, Children) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `bookings`(`First name`, `Last name`, `Email`, `Contact`, `Room Type`, `Arrival Date`, `Departure Date`, `Adults`, `Children`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]')");
 
         if ($stmt === false) {
             die("Prepare failed: " . htmlspecialchars($conn->error));
         }
 
-        $bind = $stmt->bind_param("sssssssss", $Firstname, $Lastname, $Email, $Contact, $RoomType, $ArrivalDate, $DepartureDate, $Adults, $Children);
+        $bind = $stmt->bind_param("sssssssss", $First_name, $Last_name, $Email, $Contact, $Room_Type, $Arrival_Date, $Departure_Date, $Adults, $Children);
 
         if ($bind === false) {
             die("Bind param failed: " . htmlspecialchars($stmt->error));
@@ -235,10 +237,15 @@
         }
 
         $stmt->close();
+    } else {
+        echo "<script>alert('All fields are required');</script>";
     }
+}
 
-    // Close connection
-    $conn->close();
-    ?>
+// Close connection
+$conn->close();
+?>
+
+    
 </body>
 </html>
