@@ -197,11 +197,12 @@
             </div>
         </div>
     </section>
+   
     <?php
 require 'db_connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate and sanitize input
+    // Validate  input
     $First_name = trim($_POST["first_name"]);
     $Last_name = trim($_POST["last_name"]);
     $Email = trim($_POST["email"]);
@@ -212,11 +213,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Adults = trim($_POST["adults"]);
     $Children = trim($_POST["children"]);
 
-    // Ensure data is not empty and properly sanitized
+    // Ensure data is not empty 
     if (!empty($First_name) && !empty($Last_name) && !empty($Email) && !empty($Contact) && !empty($Room_Type) && !empty($Arrival_Date) && !empty($Departure_Date) && !empty($Adults) && !empty($Children)) {
 
         // Prepare and bind
-        $stmt = $conn->prepare("INSERT INTO `bookings`(`First name`, `Last name`, `Email`, `Contact`, `Room Type`, `Arrival Date`, `Departure Date`, `Adults`, `Children`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]')");
+        $stmt = $conn->prepare("INSERT INTO `bookings`(`First name`, `Last name`, `Email`, `Contact`, `Room Type`, `Arrival Date`, `Departure Date`, `Adults`, `Children`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
         if ($stmt === false) {
             die("Prepare failed: " . htmlspecialchars($conn->error));
@@ -245,6 +246,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Close connection
 $conn->close();
 ?>
+
 
     
 </body>
