@@ -9,7 +9,7 @@
         // Sanitize and validate input
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
-        $password = $_POST["password"]; // No need to sanitize password since it's not directly used in SQL
+        $password = $_POST["password"]; 
 
         // Validate required fields
         if (empty($username)) {
@@ -26,12 +26,8 @@
             if ($stmt === false) {
                 die("Prepare failed: " . htmlspecialchars($conn->error));
             }
-
-            // You can choose to hash the password manually (not recommended, but shown here for illustration)
-            // $hashed_password = hash('sha256', $password); // Example of manual hashing
-
             // Bind parameters and execute query
-            $stmt->bind_param("sss", $username, $email, $password); // Assuming you're directly inserting the password
+            $stmt->bind_param("sss", $username, $email, $password); 
 
             if ($stmt->execute()) {
                 echo "<script>alert('Registration Successful');</script>";
@@ -71,6 +67,7 @@
             <br>
             <button type="submit" name="submit">Sign In</button>
         </form>
+        <a href="signup.php" class="button-link">Sign Up</a>
     </div>
 </body>
 </html>
