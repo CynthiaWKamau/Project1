@@ -24,10 +24,9 @@
             
             <button type="submit" name="submit">Sign Up</button>
         </form>
-        <a href="signin.php" class="button">Sign In</a>
-        <a href="signup.php" class="button-link">Sign Up</a>
-        <a href="signup_update.php" class="button-link">Update User</a>
-        <a href="signup_delete.php" class="button-link">Delete User</a>
+        <a href="signin.php" >Sign In</a>
+        <a href="signup_update.php">Update User</a>
+        <a href="signup_delete.php">Delete User</a>
     </div>
 
     <?php
